@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AFFA&T–與農共舞</title>
+    <meta name="description" content="Agriculture◎Fish◎Forest◎Animal husbandry◎Travel">
+    <meta name="author" content="Agriculture◎Fish◎Forest◎Animal husbandry◎Travel">
+    <link rel="icon" type="image/png" href="img/avatar.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./css/main.css" type="text/css" media="all" />
+    <link href="css/alert/main.css" rel="stylesheet" />
+    <style>
+        @-ms-viewport {
+            width: device-width;
+        }
+        @media only screen and (min-device-width:800px) {
+            html {
+                overflow: hidden;
+            }
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #FFFFFF;
+            background-color: #000000;        }
+    </style>
+</head>
+<body>
+    <script src="tour.js"></script>
+    <div id="pano" style="width:100%;height:100%;">
+        <noscript>
+        <table style="width:100%;height:100%;">
+            <tr style="vertical-align:middle;">
+            <td><div style="text-align:center;">ERROR:<br /><br />Javascript not activated<br /><br /></div></td></tr></table></noscript>
+        <script>
+      embedpano(
+      {
+        swf: "tour.swf",
+        xml: "landscape-1.xml",
+        target: "pano",
+        html5: "auto",
+        mobilescale: 1.0,
+        passQueryParameters: true
+      });
+        </script>
+    </div>
+    <!-- 左部全局控制菜單 -->
+    <ul id="left-menu">
+     
+        <li><a id="gyro-switch" href="#"></a></li>
+        <li><a id="autorotate-switch" href="#"></a></li>
+        <li><a id="vr-switch" href="#"></a></li>
+        <li><a id="vr-big" href="#" ></a></li>
+    </ul>
+    <!-- 背景音樂，無控制條，默認不顯示 
+    <audio loop autoplay id="bg-music" src="./sound/bg.mp3"></audio>-->
+    <!-- 右部導航菜單 -->
+    <nav class="nav-right">
+        <!-- 頭像與菜單顯示控制按鈕 -->
+        <div class="avatar">
+            <a id="toggle-right-menu" href="#"><span>-</span></a>
+        </div>
+        <!-- 右部導航菜單主體 -->
+        <div id="right-menu-container">
+            <ul class="right-menu">
+                <li><a id="project-home" onclick="materialLightAnime()" href="#"></a><span>介紹導覽</span></li>
+                <li><a id="contact" href="#"></a><span>聯絡我們</span></li>
+                <li><a id="more" href="#"></a><span>更多景觀</span></li>
+ 
+            </ul>
+        </div>
+        <!-- 語音介紹，無控制條，默認不顯示 
+        <audio id="introduction" src="./sound/introduction.mp3"></audio>-->
+    </nav>
+
+    <!-- 彈出式界面 -->
+    <div class="call popout-container">
+        <div class="popout-inner call-container">
+            <div class="call-default">
+                <span>有任何製作需求請洽</span>
+                <span></span>
+                <a href="#">馬上聯繫</a>
+                <a id="leave-contact" href="#">填寫聯繫方式</a>
+            </div>
+            <div class="leave-contact-info">
+                <form id="leave-tel" action="">
+                    <span>請填寫您的聯繫方式</span>
+                    <input placeholder="請輸入您姓名" name="your-name" type="text" />
+                    <input placeholder="請輸入您電話" name="your-tel" type="number" />
+                    <button id="submit-info" type="submit">送出</button>
+                    <button id="cancel-info">取消</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 彈出式界面 -->
+    <div class="popout-container">
+        <div class="popout-inner">
+            <div class="item-sofa popout-item">
+                <h3 class="popout-title">沙發</h3>
+                <p class="popout-details">詳情</p>
+            </div>
+        </div>
+    </div>
+    <div class="shade" id="shade">
+    </div>
+    <div class="shade-light" id="shade-light">
+    </div>
+    <div id="material-light-anime">
+        <h1 id="head-anime">風景導覽</h1>
+        <p id="text-anime">
+            提供720度全景圖，享受不一樣視覺效果
+            <br><br><br><br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Copyrights <b>RenWu</b>
+            <br>
+        </p>
+        <br>
+        <div class="exit" onclick="exitLightAnime()">關閉</div>
+    </div>
+
+    <script src="./script/script.js"></script>
+    <script src="script/alert/bop-js.js"></script>
+</body>
+</html>

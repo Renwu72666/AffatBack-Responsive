@@ -1,0 +1,51 @@
+a {
+  text-decoration: none;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+#overview {
+  position: relative;
+  height: 282px;
+}
+
+#overview img {
+  width: 100%;
+}
+
+#go-back {
+  display: block;
+  background: url(../img/arrow-back.png);
+  background-size: 32px 32px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 3%;
+  left: 2%;
+}
+
+#ov-title {
+  line-height: 35px;
+  color: #eee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 35px;
+}
+
+#ov-title a {
+  float: right;
+  color: #fff;
+  margin-right: 5px;
+}
+
+#ov-title span:first-child {
+  margin-left: 5px;
+  font-size: 1.2em;
+}
+

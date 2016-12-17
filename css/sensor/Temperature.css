@@ -1,0 +1,11 @@
+﻿   #show {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+            #show b {
+                display: inline-block;
+                font-size: 14px;
+                vertical-align: top;
+                margin-top: -10px;
+            }

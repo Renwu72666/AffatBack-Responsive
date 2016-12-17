@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+    <title>AFFA&T–與農共舞</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="icon" type="image/png" href="images/images.png" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link href="assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="assets/css/animate.min.css" rel="stylesheet" />
+	<link href="assets/css/style.min.css" rel="stylesheet" />
+	<link href="assets/css/style-responsive.min.css" rel="stylesheet" />
+	<link href="assets/css/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="assets/plugins/pace/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+    <!--renwu upload-->
+    <link href="css/upload-picture/style.css" rel="stylesheet" />
+    <link href="assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css" rel="stylesheet" />
+    <link href="assets/plugins/jquery-file-upload/css/jquery.fileupload.css" rel="stylesheet" />
+    <link href="assets/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" rel="stylesheet" />
+    <!--renwu upload-->
+    <!--sweetalert-->
+    <link href="css/sweetalert/sweetalert2.css" rel="stylesheet" />
+    <link href="css/sweetalert/sweetalert2.min.css" rel="stylesheet" />
+    <!--sweetalert-->
+</head>
+<body>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+        <!-- begin #header -->
+        <div id="header" class="header navbar navbar-default navbar-fixed-top">
+            <!-- begin container-fluid -->
+            <div class="container-fluid">
+                <!-- begin mobile sidebar expand / collapse button -->
+                <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand"><span class=""><img src="images/images.png" alt="" style="width:30px;height:30px;" /></span> AFFA&T產銷平台</a>
+                    <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- end mobile sidebar expand / collapse button -->
+                <!-- begin header navigation right -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form class="navbar-form full-width">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="輸入關鍵字" />
+                                <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="dropdown navbar-user">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="images/icon/farmer.png" alt="" />
+                            <span class="hidden-xs">AFFA&T</span> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInLeft">
+                            <li><a href="" id="loginout">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- end header navigation right -->
+            </div>
+            <!-- end container-fluid -->
+        </div>
+        <!-- end #header -->
+        <!-- begin #sidebar -->
+        <div id="sidebar" class="sidebar">
+            <!-- begin sidebar scrollbar -->
+            <div data-scrollbar="true" data-height="100%">
+                <!-- begin sidebar scrollbar -->
+                <div data-scrollbar="true" data-height="100%">
+                    <!-- begin sidebar nav -->
+                    <ul class="nav">
+                        <li class="has-sub">
+                            <a href="index.html">
+                                <i class="fa fa-laptop"></i>
+                                <span>首頁</span>
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;">
+                                <b class="caret pull-right"></b>
+                                <i class="fa fa-area-chart"></i>
+                                <span>數據分析</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="Agricultural-products-chart.html">產物數據</a></li>
+                                <li><a href="customer-analysis.html">顧客數據</a></li>
+                                <li><a href="analysis_results.html">關聯結果</a></li>
+                                <li><a href="Decision-tree.html">分析預測報告</a></li>
+                                <li><a href="olap-cube.html">olap產物圖表</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;"><b class="caret pull-right"></b><i class="fa fa-sliders"></i><span>感測器分析</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="Temperature-Humidity.html">空氣溫濕度感測數據</a></li>
+                                <li><a href="Soil-moisture.html">土壤濕度感測數據</a></li>
+                                <li><a href="Light-brightness.html">光感亮度感測數據</a></li>
+                                <li><a href="Sound-sensor.html">聲音感測數據</a></li>
+                                <li><a href="Infrared-sensor.html">人體紅外線感測數據</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub active">
+                            <a href="javascript:;">
+                                <b class="caret pull-right"></b>
+                                <i class="fa fa-slideshare"></i>
+                                <span>虛擬實境</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="active"><a href="vr-view.html">VR體驗專區</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;">
+                                <b class="caret pull-right"></b>
+                                <i class="fa fa-map-marker"></i>
+                                <span>農場私房遊處</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="Attractions_added.html">Map景點新增</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;">
+                                <b class="caret pull-right"></b>
+                                <i class="fa fa-file-pdf-o"></i>
+                                <span>一般管理</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="has-sub">
+                                    <a href="javascript:;">
+                                        <b class="caret pull-right"></b>商品管理
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="product_list.html">商品</a></li>
+                                        <li><a href="Farm_management.html">農場</a></li>
+                                        <li><a href="grow_product.html">生長紀錄</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="Order-view.html">訂單資訊</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;">
+                                <b class="caret pull-right"></b>
+                                <i class="fa fa-key"></i>
+                                <span>管理者</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="admin-view.html">管理員用戶</a></li>
+                                <li><a href="Account-view.html">會員資訊</a></li>
+                                <li><a href="forum.html">Q&A回復</a></li>
+                                <li><a href="contact-us-view.html">聯絡我們資訊</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- end sidebar nav -->
+                </div>
+                <!-- end sidebar scrollbar -->
+            </div>
+            <!-- end sidebar scrollbar -->
+        </div>
+        <div class="sidebar-bg"></div>
+        <!-- end #sidebar -->
+		
+		<!-- begin #content -->
+        <div id="content" class="content">
+            <!-- begin breadcrumb -->
+            <ol class="breadcrumb pull-right">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="vr-view.html">虛擬實境</a></li>
+                <li>vr體驗區</li>
+            </ol>
+            <!-- end breadcrumb -->
+            <!-- begin page-header -->
+            <h1 class="page-header">vr 後製區 <small>做出你想要的完美</small></h1>
+            <!-- end page-header -->
+
+            <div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        
+                    </div>
+                    <h4 class="panel-title" style="font-size:16px">Vr 場景製作</h4>
+                </div>
+                <div class="panel-body">
+                    <!-- Wu upload method -->
+                    <form id="fileupload" action="UploadProgress.aspx" method="POST" enctype="multipart/form-data">
+                        <!-- Redirect browsers with JavaScript disabled to the origin page -->
+                        <!--      <noscript><input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"></noscript>-->
+                        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                        <div class="row fileupload-buttonbar">
+                            <div class="col-lg-7">
+                                <!-- The fileinput-button span is used to style the file input field as button -->
+                                <span class="btn btn-success fileinput-button">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                    <span>選擇檔案</span>
+                                    <input type="file" id="upload_vr" name="files[]" onchange="CheckFile(this)" multiple>
+                                </span>
+                                <button type="submit" class="btn btn-primary start">
+                                    <i class="glyphicon glyphicon-upload"></i>
+                                    <span>檔案上傳</span>
+                                </button>
+                                <button type="reset" class="btn btn-warning cancel">
+                                    <i class="glyphicon glyphicon-ban-circle"></i>
+                                    <span>取消上傳</span>
+                                </button>
+                                <button type="button" class="btn btn-danger delete">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                    <span>刪除檔案</span>
+                                </button>
+                                <input type="checkbox" class="toggle">
+                                <!-- The global file processing state -->
+                                <span class="fileupload-process"></span>
+                            </div>
+                            <!-- The global progress state -->
+                            <div class="col-lg-5 fileupload-progress fade">
+                                <!-- The global progress bar -->
+                                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                                </div>
+                                <!-- The extended global progress state -->
+                                <div class="progress-extended">&nbsp;</div>
+                            </div>
+                        </div>
+                        <!-- The table listing the files available for upload/download -->
+                        <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                    </form>
+                    <br>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">上傳說明</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>上傳檔案大小限制在 <strong>50 MB</strong> 以下。</li>
+                                <li>限制上傳檔案類型： (<strong> gif , jpeg , png , jpg 之類型檔案 >< </strong>)</li> <!--上傳類型的限制設定在 main.js-->
+                                <li>請傳6張，<strong>分別是(上下左右前)</strong>的image。方便製作vr場景</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Wu upload method -->
+                </div>
+
+            </div>
+            <div class="panel panel-inverse" >
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        
+                    </div>
+                    <h4 class="panel-title" style="font-size:16px">Vr 呈現</h4>
+                </div>
+                <div class="panel-body" style="height:800px">
+                    <iframe src="vr-web/vr-test.html" width="100%" height="100%" scrolling="no" allowfullscreen="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+                <!-- end #content -->
+                <!-- begin scroll to top btn -->
+                <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+                <!-- end scroll to top btn -->
+            </div>
+            <!--  display files upload -->
+            <script id="template-upload" type="text/x-tmpl">
+                {% for (var i=0, file; file=o.files[i]; i++) { %}
+                <tr class="template-upload fade">
+                    <td>
+                        <span class="preview"></span>
+                    </td>
+                    <td>
+                        <p class="name">{%=file.name%}</p>
+                        <strong class="error text-danger"></strong>
+                    </td>
+                    <td>
+                        <p class="size">Processing...</p>
+                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+                    </td>
+                    <td>
+                        {% if (!i && !o.options.autoUpload) { %}
+                        <button class="btn btn-primary start" disabled>
+                            <i class="glyphicon glyphicon-upload"></i>
+                            <span>Start</span>
+                        </button>
+                        {% } %}
+                        {% if (!i) { %}
+                        <button class="btn btn-warning cancel">
+                            <i class="glyphicon glyphicon-ban-circle"></i>
+                            <span>Cancel</span>
+                        </button>
+                        {% } %}
+                    </td>
+                </tr>
+                {% } %}
+            </script>
+            <!-- temp  display  for download -->
+            <script id="template-download" type="text/x-tmpl">
+                {% for (var i=0, file; file=o.files[i]; i++) { %}
+                <tr class="template-download fade">
+                    <td>
+                        <span class="preview">
+                            {% if (file.thumbnailUrl) { %}
+                            <a href="{%=file.url%}" target="_blank" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+                            {% } %}
+                        </span>
+                    </td>
+                    <td>
+                        <p class="name">
+                            {% if (file.url) { %}
+                            <a href="{%=file.url%}" target="_blank" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+                            {% } else { %}
+                            <span>{%=file.name%}</span>
+                            {% } %}
+                        </p>
+                        {% if (file.error) { %}
+                        <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+                        {% } %}
+                    </td>
+                    <td>
+                        <span class="size">{%=o.formatFileSize(file.size)%}</span>
+                    </td>
+                    <td>
+                        {% if (file.deleteUrl) { %}
+                        <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}" {% if (file.deletewithcredentials) { %} data-xhr-fields='{"withCredentials":true}' {% } %}>
+                            <i class="glyphicon glyphicon-trash"></i>
+                            <span>Delete</span>
+                        </button>
+                        <input type="checkbox" name="delete" value="1" class="toggle">
+                        {% } else { %}><button class="btn btn-warning cancel">
+                            <i class="glyphicon glyphicon-ban-circle"></i>
+                            <span>Cancel</span>
+                        </button>
+                        {% } %}
+                    </td>
+                </tr>
+                {% } %}
+            </script>
+            <!-- end page container -->
+            <!-- ================== BEGIN BASE JS ================== -->
+            <script src="assets/plugins/jquery/jquery-1.9.1.min.js"></script>
+            <script src="assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+            <script src="assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+            <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+            <script src="assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+            <!-- ================== END BASE JS ================== -->
+            <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+            <script src="assets/js/apps.min.js"></script>
+            <!-- ================== END PAGE LEVEL JS ================== -->
+            <!--upload picture-->
+            <!-- jquery.ui.widget.js 不能省略，否則已上傳及要上傳之清單會看不到-->
+            <script src="assets/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+            <script src="assets/plugins/jquery-file-upload/js/vendor/tmpl.min.js"></script>
+            <!-- The Canvas to Blob plugin is included for image resizing functionality -->
+            <script src="assets/plugins/jquery-file-upload/js/vendor/load-image.min.js"></script>
+            <!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
+            <script src="assets/plugins/jquery-file-upload/js/vendor/canvas-to-blob.min.js"></script>
+            <!-- blueimp Gallery script -->
+            <script src="assets/plugins/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js"></script>
+            <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+            <script src="assets/plugins/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+            <!-- basic pligin -->
+            <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload.js"></script>
+            <!-- (processing plugin) -->
+            <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-process.js"></script>
+            <!-- (validation plugin) -->
+            <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-validate.js"></script>
+            <!-- (user interface plugin) -->
+            <script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-ui.js"></script>
+            <script>var fileuploadurl = "vr-upload/UploadProgress.aspx";</script>
+            <script src="javascript/upload-picture/main.js"></script>
+            <!--upload picture-->
+            <!--sweetalert2-->
+            <script src="javascript/sweetalert/sweetalert2.min.js"></script>
+            <script src="javascript/sweetalert/sweetalert2.js"></script>
+            <script src="javascript/upload-picture/wu-upload.js"></script>
+            <!--ren wu login check-->
+            <script src="javascript/login/loginout.js"></script>
+            <script>
+                $(document).ready(function () {
+                    App.init();
+                });
+            </script>
+</body>
+</html>

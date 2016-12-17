@@ -1,0 +1,348 @@
+/* 樣式一般化與重置 
+----------------------------------*/
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-size: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 右部菜單樣式
+----------------------------------*/
+.nav-right {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  width: 75px;
+  opacity: 0;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  background-size: 50px 50px;
+  position: relative;
+}
+
+#toggle-right-menu {
+  display: block;
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  font-size: 30px;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  background: rgba(21, 21, 21, 0.7);
+  text-align: center;
+}
+
+#toggle-right-menu span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#right-menu-container {
+  border-bottom: 1px solid transparent;
+  overflow: hidden;
+}
+
+.right-menu {
+  position: relative;
+  margin-top: 10px;
+  top: 0;
+}
+
+.right-menu a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 25px 25px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.right-menu li {
+  width: 38px;
+  height: 38px;
+  background: rgba(21, 21, 21, 0.8);
+  margin: 6px auto 24px;
+  border-radius: 19px;
+  position: relative;
+}
+
+/* 右部菜單按鈕圖標 */
+#project-home {
+  background-image: url(../img/home.png);
+}
+
+#get-envelope {
+  background-image: url(../img/red-envelope.png);
+}
+
+#audio-introduction {
+  background-image: url(../img/play.png);
+}
+
+#recommendations {
+  background-image: url(../img/recommendation.png);
+}
+
+#contact {
+  background-image: url(../img/contact.png);
+  animation-name: rotation;
+  animation-duration: .5s;
+  animation-delay: 15s;
+  animation-iteration-count: 2;
+}
+
+#more {
+  background-image: url(../img/more.png);
+}
+
+/* 右部菜單按鈕圖標動畫 */
+@keyframes rotation{
+  from {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.right-menu span {
+  position: absolute;
+  left: 50%;
+  bottom: -32%;
+  transform: translate(-50%, 32%);
+  white-space: nowrap;
+  font-size: 0.65em;
+}
+
+/* 右部菜單的彈出式界面 */
+/* 未優化代碼，更改文檔結構需要同時更新樣式表 */
+.call-default span,
+.call-default a {
+  font-size: 1em;
+  text-align: center;
+  display: block;
+  color: black;
+  margin: 20px auto;
+}
+
+.call-default> span:first-child {
+  color: #666;
+}
+
+.call-default> span:nth-child(2) {
+  font-weight: bold;
+}
+
+.call-default> a {
+  width: 70%;
+  line-height: 35px;
+  border-radius: 50px;
+  border: 1px solid #109822;
+}
+
+.call-default> a:nth-child(3) {
+  color: white;
+  background: #109822;
+  margin-bottom: 10px;
+}
+
+.call-default> a:nth-child(4) {
+  color: #109822;
+  margin-top: 0;
+}
+
+.leave-contact-info span,
+.leave-contact-info input,
+.leave-contact-info button {
+  font-size: 1em;
+  display: block;
+  width: 70%;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  line-height: 35px;
+  margin: 10px auto;
+  background: white;
+}
+
+#leave-tel button:nth-child(4) {
+  border-color: #109822;
+  background: #109822;
+  color: #fff;
+}
+
+.leave-contact-info span:first-child {
+  color: #666;
+  font-size: 1.2em;
+  border: 0;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.leave-contact-info input {
+  padding-left: 5%;
+}
+
+.leave-contact-info input:last-of-type {
+  margin-bottom: 15px;
+}
+
+.leave-contact-info button {
+  width: 75%;
+  margin: 10px auto;
+}
+
+.leave-contact-info button:last-child {
+  margin-bottom: 20px;
+  color: #777;
+}
+
+input:focus {
+  border: 0;
+}
+
+.leave-contact-info {
+  display: none;
+}
+
+
+/* 左部菜單
+----------------------------------*/
+#left-menu {
+  width: 30px;
+  position: absolute;
+  left: 0%;
+  top: 40%;
+  opacity: 0;
+}
+
+#left-menu li {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  margin: 8px auto;
+  /* background-size: 30px 60px; */
+  /* background-position: 0 0; */
+}
+
+#left-menu a {
+  display: block;
+  height: 100%;
+  background-size: 30px 60px;
+}
+
+#bg-switch {
+  background-image: url(../img/bg-music.png);
+}
+
+#gyro-switch {
+  background-image: url(../img/gyro.png);
+  background-position: 0 -30px;
+}
+
+#autorotate-switch {
+  background-image: url(../img/autorotate.png);
+  background-position: 0 -30px;
+}
+
+#vr-switch {
+  background-image: url(../img/vr-on.png);
+  background-size: 30px 30px !important;
+}
+#vr-big {
+  background-image: url(../img/big.png);
+  background-size: 30px 30px !important;
+}
+
+
+/* 彈出式界面樣式
+----------------------------------*/
+.popout-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3900;
+  display: none;
+}
+
+.popout-inner {
+  color: black;
+  width: 80%;
+  background: #fff;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.popout-item {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.popout-title {
+  margin: 0;
+  color: #666;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.popout-details {
+  padding: 5px 10px;
+}
+
+
+/* 過渡動畫
+----------------------------------*/
+.fade-in {
+  transition: .4s;
+  opacity: 1;
+  top: 50%;
+}
+
+.fade-out {
+  transition: .4s;
+  opacity: 0;
+  top: 40%;
+}
+
+.fade-in-ltr {
+  transition: 1.5s;
+  opacity: 1 !important;
+  left: 2% !important;
+}
+
+.fade-in-rtl {
+  transition: 1.5s;
+  opacity: 1 !important;
+  right: 10px !important;
+}

@@ -1,0 +1,100 @@
+﻿ body {
+            padding: 10px;
+        }
+        /* 上传控件 */
+        .upload {
+            margin-top: 10px;
+            width: 280px;
+            height: 30px;
+        }
+
+            .upload .uploadbtnBox {
+                float: left;
+                height: 30px;
+                width: 70px;
+                margin-right: 8px;
+            }
+
+            .upload .progress {
+                height: 4px;
+                line-height: 4px;
+                *zoom: 1;
+                background: #fff;
+                float: left;
+                width: 200px;
+                border: 1px #ccc solid;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: none;
+            }
+
+            .upload .filestate {
+                float: left;
+                height: 20px;
+                text-align: left;
+                width: 150px;
+                line-height: 20px;
+                display: none;
+                color: #333;
+                overflow: hidden;
+            }
+
+            .upload .progresspercent {
+                float: right;
+                padding-top: 5px;
+                height: 15px;
+                text-align: right;
+                font-size: 9px;
+                line-height: 15px;
+                color: #333;
+            }
+
+            .upload .uploadbtnBox .a-upload {
+                height: 28px;
+                background: #4090c0;
+                border: 1px solid #dddddd;
+                color: #ffffff;
+                line-height: 28px;
+                padding: 0 6px;
+                font-size: 0.9em;
+                overflow: hidden;
+                display: inline-block;
+                text-decoration: none;
+                *display: inline;
+                *zoom: 1;
+            }
+
+                .upload .uploadbtnBox .a-upload input {
+                    position: absolute;
+                    width: 70px;
+                    height: 30px;
+                    overflow: hidden;
+                    margin-left: -10px;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                    cursor: pointer;
+                }
+
+            .upload .progress .bar {
+                height: 4px;
+                line-height: 4px;
+                background: #4090c0;
+                *zoom: 1;
+            }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .clearfix {
+            _zoom: 1;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }

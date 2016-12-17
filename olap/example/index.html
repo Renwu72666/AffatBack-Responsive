@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>AFFA&T–與農共舞</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="icon" type="image/png" href="../../images/images.png" />
+    <link href="../themes/default/theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="example.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="../lib/highcharts/exporting.js"></script>
+    <script type="text/javascript" src="../lib/jszip.js"></script>
+    <script type="text/javascript" src="../lib/xlsx.js"></script>
+    <script type="text/javascript" src="../lib/ui.min.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+</head>
+<body>
+    <div class="example-tools"> <div class="example-group"> <div class="title" style="font-size:14px">分析專區</div><div class="items" id="example-layouts" style="font-size:13px"></div></div><!--<div class="example-group"> <div class="title">功能</div><div class="items" id="example-conditions"></div></div>--> <div class="example-group"> <div class="title" style="font-size:14px">匯出方式</div><div class="items" id="example-export" style="font-size:13px"></div></div></div>
+    <script type="text/javascript">var fields=[{dataIndex: '0', header: '年', sort: 'ASC', type: 'string', area: 'columns'},{dataIndex: '1', header: '月', sort: 'ASC', type: 'string', area: 'columns'},{dataIndex: '2', header: '產量', type: 'int', area: 'data'},{dataIndex: '3', header: '銷售', type: 'int', area: 'data'},{dataIndex: '4', header: '存量', type: 'int', area: 'data'},{dataIndex: '5', header: '分類', type: 'string', area: 'rows'},{dataIndex: '6', header: '項目', type: 'string', area: 'rows'},{dataIndex: '7', header: '品種', type: 'string', area: 'rows'}]; var olap=ui.instance({type: 'olap', autoFitColumns: true, plugins: [ 'olap.chart', 'olap.queryBuilder', 'olap.styleConditions'], store: olapFakeData, stateId: 'gen1', layoutName: '321', fields: fields, parent: 'body', left: 10, top: 50, right: 10, bottom: 10, autoRender: false});</script>
+    <script type="text/javascript" src="utils.js"></script>
+</body>
+</html>

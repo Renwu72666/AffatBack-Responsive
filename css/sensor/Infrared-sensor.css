@@ -1,0 +1,15 @@
+﻿  #demo-area-02-light img {
+            height: 200px;
+            display: none;
+            pointer-events: auto !important;
+        }
+
+        #demo-area-02-light.on #demo-area-02-on {
+            display: inline-block;
+            pointer-events: auto !important;
+        }
+
+        #demo-area-02-light.off #demo-area-02-off {
+            display: inline-block;
+            pointer-events: auto !important;
+        }
